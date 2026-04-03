@@ -1128,17 +1128,7 @@ function goToConfirm() {
 
   const missing = [];
 
-  if(!$('f-moushikomi').value) missing.push('申込日');
-  if(!$('f-furigana').value.trim()) missing.push('ふりがな');
-  if(!$('f-name').value.trim()) missing.push('入会者氏名');
-  if(!$('f-by-era').value || !$('f-by-year').value || !$('f-by-month').value || !$('f-by-day').value) missing.push('生年月日');
-  if(!$('f-tel').value.trim()) missing.push('電話番号');
-  if(!$('f-address').value.trim()) missing.push('住所');
-  if(!$('f-email').value.trim()) missing.push('メールアドレス');
-  if(!$('f-emg-name').value.trim()) missing.push('緊急連絡先 氏名');
-  if(!$('f-emg-tel').value.trim()) missing.push('緊急連絡先 電話番号');
-  if(!document.querySelector('input[name="member-type"]:checked')) missing.push('会員種別');
-  if(!$('f-agree').checked) missing.push('同意チェック');
+  // VALIDATION_DISABLED
 
   if(missing.length > 0) {
     banner.innerHTML = '⚠ 未入力の項目があります：<br>・' + missing.join('<br>・');
